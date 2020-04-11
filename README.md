@@ -40,6 +40,7 @@ applications:
     LDAP_SEARCH_BASE: [LDAP user search base eg ou=users,dc=cda-ocp,dc=cloud]
     LDAP_SEARCH_FILTER: [LDSP search filter eg (uid={{username}})]
 ```
+Access the app at the route defined for the Cloud Foundry deployment.
 
 ## Running locally
 Define the ENV vars in a file called `.env`. Rename the file `.env.sample` to `.env` and adjust the values appropriately.
