@@ -1,0 +1,136 @@
+/*
+ * Copyright 2020 IBM All Rights Reserved.
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+header {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  background-color: #1b2e4e;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, .4);
+}
+
+.banner-txt-bold {
+  padding: 15px 15px;
+  color: white;
+  font-weight: bold
+}
+
+.banner-txt {
+  padding: 15px 15px;
+  color: white;
+  font-size: smaller;
+}
+
+.custom-hr-dark {
+  width: 95%;
+  font-size: 1px;
+  color: rgba(0, 0, 0, 0);
+  line-height: 2px;
+  background-color: grey;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.custom-hr-light {
+  width: 95% ;
+  font-size: 1px;
+  color: rgba(0, 0, 0, 0);
+  line-height: 1px;
+  background-color: grey;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.djia  {
+  color: #256dd3;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  display: inline-block;
+}
+
+.portfolio-value {
+  color: #256dd3;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.djia-vol  {
+  color: #95d13c;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  display: inline-block;
+}
+
+ .portfolio-ytd {
+  color: #95d13c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* not active */
+.nav-pills .nav-link:not(.active) {
+    background-color: #fff;
+    color: #C8C8C8;
+}
+
+/* active*/
+.nav-pills > li > a.active {
+	background-color: #f1f4f4!important;
+	color: #256dd3!important;
+	 border-radius: 4px 4px 0 0!important ;
+}
+
+/*.btn-primary.custom-btn {
+	background-color: #592f92;
+	border-color: #592f92;
+}*/
+
+.btn-primary.custom-login-btn {
+	background-color: #1b2e4e;
+	border-color: #1b2e4e;
+}
+
+/* .invalid class prevents CSS from automatically applying */
+/*.invalid input:required:invalid {
+  background: #BE4C54;
+}*/
+
+/* Mark valid inputs during .invalid state */
+/*.invalid input:required:valid {
+  background: #17D654;
+}*/
+/*.btn-primary.btn-success:active:focus {
+  border-color: #592f92;
+}
+
+.btn-primary.custom-btn:active {
+  box-shadow: none;
+}
+
+.btn-outline-primary.custom-btn {
+	border-color: #592f92;
+	color: #592f92;
+}*/

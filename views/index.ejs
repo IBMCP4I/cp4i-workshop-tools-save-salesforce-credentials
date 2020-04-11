@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2020 IBM All Rights Reserved.
+
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+ -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>ACE Lab - Save Salesforce credentials</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <script src="fhttps://use.fontawesome.com/releases/v5.8.2/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <!--<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>-->
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+      <div class="col-md-6 align-self-center">
+        <div class="banner-txt-bold float-left"><span>
+            <h5>ICP4I AppConnect Lab</h5>
+          </span></div>
+      </div>
+      <div class="col-md-6">
+        <div class="banner-txt float-right"><span> <i class="fas fa-user" style="color:white"></i></span><span>&nbsp;&nbsp;<%=user%></span>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span><a href="/logout" style="color:white"><span> <i class="fas fa-sign-out-alt"></i></span><span>&nbsp;&nbsp;Logout</span></a></span>
+        </div>
+      </div>
+
+    </div>
+      <div class="row"><span>&nbsp;</span>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 pt-3 pb-4 mt-10 mb-10">
+        <h4>Save Salesforce credentials to the Cloud Pak for Integration OpenShift cluster</h4>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 pt-3 pb-4 mb-4">
+        <form method="POST" action="/protected" class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom01" class="font-weight-bold">Salesforce Username</label>
+            <input type="email" name="username" class="form-control" id="validationCustom01"  placeholder="Salesforce Username" value="<%=username%>" required></input>
+            <div class="invalid-feedback">
+              Please provide a valid username
+            </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom02" class="font-weight-bold">Salesforce Login URL</label>
+
+              <input type="url" name="loginurl" class="form-control"  id="validationCustom02"  placeholder="Salesforce Login URL" value="https://login.salesforce.com" required ></input>
+              <div class="invalid-feedback">
+                Please provide a  valid login URL
+              </div>
+
+            </div>
+          </div>
+
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom03" class="font-weight-bold">Salesforce Password</label>
+                  <div class="input-group">
+               <input type="password" name="password" class="form-control" id="validationCustom03"  placeholder="Salesforce Password" value="<%=password%>"  required ></input>
+                 <div class="input-group-append"><div class="input-group-text"><i toggle="#validationCustom03" class="fa fa-eye toggle-password"></i></div></div>
+               <div class="invalid-feedback">
+                 Please provide a password
+               </div>
+                 </div>
+              </div>
+
+
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom04" class="font-weight-bold">Salesforce Client Id</label>
+              <div class="input-group">
+              <input type="password" name="clientid" class="form-control" id="validationCustom04" data-toggle="password" placeholder="Salesforce Client Id" value="<%=clientid%>" required ></input>
+              <div class="input-group-append"><div class="input-group-text"><i toggle="#validationCustom04" class="fa fa-eye toggle-password"></i></div></div>
+              <div class="invalid-feedback">
+                Please provide a client Id
+              </div>
+                </div>
+            </div>
+
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom05"  class="font-weight-bold">Salesforce Client Secret</label>
+              <div class="input-group">
+           <input type="password" name="clientsecret" class="form-control"  id="validationCustom05"  placeholder="Salesforce Client Secret" value="<%=clientsecret%>" required ></input>
+             <div class="input-group-append"><div class="input-group-text"><i toggle="#validationCustom05" class="fa fa-eye toggle-password"></i></div></div>
+           <div class="invalid-feedback">
+             Please provide a valid client secret
+           </div>
+             </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom06" class="font-weight-bold">Salesforce Security Token</label>
+                <div class="input-group">
+              <input type="password" name="sectoken" class="form-control" id="validationCustom06"  placeholder="Salesforce Security Token" value="<%=sectoken%>" required ></input>
+                <div class="input-group-append"><div class="input-group-text"><i toggle="#validationCustom06" class="fa fa-eye toggle-password"></i></div></div>
+              <div class="invalid-feedback">
+                Please provide a valid client Id
+              </div>
+                </div>
+            </div>
+
+
+          </div>
+
+          <button class="btn btn-primary" type="submit">Save credentials</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mb-0 ">
+          <div><span id="statusMsg"><%=statusmsg%></span></div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12 mb-0 mt-0">
+          <div><span id="errorMsg" class="text-danger"><%=errormsg%></span></div>
+        </div>
+
+    </div>
+
+  </div>
+
+
+
+<script>
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+
+    $(document).ready(function() {
+        console.log('jQuery initializing');
+        $(".toggle-password").click(function() {
+
+           $(this).toggleClass("fa-eye fa-eye-slash");
+               var input = $($(this).attr("toggle"));
+               if (input.attr("type") == "password") {
+                 input.attr("type", "text");
+               } else {
+                 input.attr("type", "password");
+               }
+           });
+
+    });
+
+
+</script>
+</body>
+
+</html>

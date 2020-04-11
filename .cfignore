@@ -1,0 +1,7 @@
+node_modules
+.env*
+manifest-sample.yml
+.git
+.gitignore
+README.md
+LICENSE
